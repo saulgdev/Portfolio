@@ -11,21 +11,21 @@ function About({}: Props) {
       transition={{
         duration: 2.0,
       }}
-      className="flex flex-col relative text-center md:text-left md:flex-col h-screen max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="flex flex-col relative text-center md:text-left md:flex-col h-screen max-w-7xl px-5 py-12 justify-evenly mx-auto items-center"
     >
       <h3 className="absolut top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
 
-      <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">Um pouco sobre mim</h4>
+      <div className="space-y-6 px-0 md:px-10">
+        <h4 className="text-2xl font-semibold">Um pouco sobre mim</h4>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
             duration: 2.0,
           }}
-          className="text-base"
+          className="text-[14px] md:text-base"
         >
           Depois de anos trabalhando como Designer e freelancer na área de
           comunicação visual, decidi começar a estudar e entender como funciona
