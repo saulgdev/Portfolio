@@ -1,4 +1,3 @@
-"use client";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 
@@ -44,33 +43,34 @@ function Header({}: Props) {
           bgColor="transparent"
         />
       </motion.div>
-
-      <motion.div
-        initial={{
-          x: 500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1.2,
-        }}
-        className=" flex flex-row items-center text-gray-300 cursor-pointer"
-      >
-        <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400 font-semibold">
-          Entre em contato!
-        </p>
-      </motion.div>
+      <a href="#contact">
+        <motion.div
+          initial={{
+            x: 500,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.2,
+          }}
+          className=" flex flex-row items-center text-gray-300 cursor-pointer"
+        >
+          <SocialIcon
+            className="cursor-pointer"
+            network="email"
+            fgColor="gray"
+            bgColor="transparent"
+          />
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400 font-semibold">
+            Entre em contato!
+          </p>
+        </motion.div>
+      </a>
     </header>
   );
 }

@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
@@ -29,18 +28,15 @@ function MainContainer({}: Props) {
           <Cursor cursorColor="#F7AB0A" />
         </h1>
         <div className="pt-5">
-          <Link href="#about">
+          <a href="#about">
             <button className="heroButton">About</button>
-          </Link>
-          <Link href="#about">
+          </a>
+          <a href="#projects">
             <button className="heroButton">Projects</button>
-          </Link>
-          <Link href="#about">
+          </a>
+          <a href="#skills">
             <button className="heroButton">Skills</button>
-          </Link>
-          <Link href="#about">
-            <button className="heroButton">Contact me</button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

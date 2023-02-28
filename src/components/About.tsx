@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "framer-motion";
 
 type Props = {};
@@ -25,7 +24,7 @@ function About({}: Props) {
           transition={{
             duration: 2.0,
           }}
-          className="text-[14px] md:text-base"
+          className="text-[14px] md:text-xl"
         >
           Depois de anos trabalhando como Designer e freelancer na área de
           comunicação visual, decidi começar a estudar e entender como funciona
