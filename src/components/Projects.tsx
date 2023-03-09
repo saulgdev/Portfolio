@@ -1,5 +1,8 @@
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
+import { listenerCount } from "process";
+
+import { projects } from "../projects/data";
 
 type Props = {};
 
@@ -16,13 +19,9 @@ function Projects({}: Props) {
       </h3>
 
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {projects.map((element: any) => (
+          <ProjectCard key={element.name} element={element} />
+        ))}
       </div>
     </motion.div>
   );
