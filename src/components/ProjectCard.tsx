@@ -14,7 +14,10 @@ interface ElementProps {
 
 function ProjectCard({ element }: Props) {
   return (
-    <div className="flex flex-col rounded-lg items-center space-y-3 flex-shrink-0 w-[370px] snap-center bg-[#292929] p-10 md:w-[600px] xl:w-[720px] hover:opacity-100 md:opacity-40 h-[540px] md:h-[600px]">
+    <div
+      key={element.name}
+      className="flex flex-col rounded-lg items-center space-y-3 flex-shrink-0 w-[370px] snap-center bg-[#292929] p-10 md:w-[600px] xl:w-[720px] hover:opacity-100 md:opacity-40 h-[540px] md:h-[600px]"
+    >
       <motion.img
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.2 }}
@@ -30,7 +33,7 @@ function ProjectCard({ element }: Props) {
         </h5>
         <ul className="list-disc space-y-1 ml-5 text-lg mt-1">
           {element.techs.map((el: any) => (
-            <li>{el}</li>
+            <li key={el}>{el}</li>
           ))}
         </ul>
         <p className="text-1xl font-semibold mt-2">{element.description}</p>
